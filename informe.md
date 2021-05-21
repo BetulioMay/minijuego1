@@ -2,7 +2,7 @@
 
 **Alumno: ** César Alberto Mayora Suárez
 
-**DNI:** Y5430138J
+**DNI:** 
 
 ### Clase ConjuntoParticulas
 
