@@ -92,7 +92,7 @@ void test5(string s) {
 
 }
 
-int main(void) {
+/*int main(void) {
 
     test1("\n************* Test 1 ************* ");
     test2("\n************* Test 2 ************* ");
@@ -100,4 +100,4 @@ int main(void) {
     test4("\n************* Test 4 ************* ");
     test5("\n************* Test 5 ************* ");
     return 0;
-}
+}*/
