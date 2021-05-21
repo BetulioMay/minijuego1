@@ -14,6 +14,7 @@ private:
         void reservarMemoria(Particula * &set, const int tam);
         void liberaMemoria(Particula * &set);
         void resizeConjunto(const int n_size);
+        bool posValida(const int pos) const;
 
 public:
 

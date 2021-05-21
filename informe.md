@@ -12,7 +12,11 @@ En la implementación de ésta clase se prentendía la creación de un conjunto 
 
 En los métodos de la clase se trata de cubrir cualquier manipulación de estas partículas. En general no hubo ningún problema, aunque hubo algunas dificultades en especial con la gestión de memoria dinámica en el método privado "resizeConjunto" donde se redimensiona en conjunto.
 
+Para los métodos de consulta o de modificación de del conjunto hago un checkeo de que la variable "posicion" esta correctamente definida dentro de los límites del conjunto, en caso contrario, no hace la operación. Aunque este checkeo es simple, he decidico hacer un función que haga esto mismo; sobre todo lo hago para no repetir código además que mejora la legibilidad del mismo. Esta función será privada ya que solo deberá su uso a otros métodos de la clase.
+
 En la implementación de otros métodos como "reservaMemoria" y "liberaMemoria" se pasa como parámetro "Particula * &set", aunque es verdad que, como método de la clase, no es necesario pasar este parámetro, pero debido a que se también se manipulan conjuntos, como en la redimensión del conjunto, que no son del objeto en cuestión; se declara de esta manera para que sea más "general".
+
+En cada Test se podrá comprobar que *valgrind* no informa ningún error de fuga de memoria o mala gestión de la misma.
 
 A *grosso modo* no hubo más dificultad de lo mencionado, pasando todos los test del fichero *pruebasConjunto.cpp*.
 
@@ -39,8 +43,8 @@ Cuando termina el juego, es decir, cuando no hayan mas particulas se dejarán de
 Para el minijuego pretendía crear un método *update()* para la clase ConjuntoPartícula y en método *main* en cada *tick* llamara el método, de manera que se modularice más el minijuego. Al igual que un método *draw()* que haga las mismas funciones que hay en el *main()* pero que de esta manera quede más modularizado.
 Además que deja pie a que en el "canvas" se pinten mas cosas y no solo juego base, ya que el draw sería un método propio del ConjuntoPartículas, por lo tanto, si quisieramos agregar más objetos, estos tendrán sus propios métodos *update* y *draw* y podremos elegir cuales se actualizan o dibujan y cuales no.
 
-Más allá de lo dicho no hubo problema en la implementación del minijuego. Durante el desarrollo del mismo hice un control de versiones del proyecto con *git*, aún asi hubo dificultades con esto (errores en la autentificación, errores al hacer push, etc.)y tuve que eliminar el repositorio y hacerlo de nuevo, es por esto que se puede ver que no hubieron muchos *"commits"*.
-De igual manera, puede ver el minijuego en el repositorio de GitHub aquí -> https://github.com/BetulioMay/minijuego1.
+Más allá de lo dicho no hubo problema en la implementación del minijuego. Durante el desarrollo del mismo hice un control de versiones del proyecto con *git*, aún asi hubo dificultades con esto (errores en la autentificación, errores al hacer push al remoto, etc.) y tuve que eliminar el repositorio y hacerlo de nuevo, es por esto que se puede ver que no hubieron muchos *"commits"*.
+De igual manera, puede ver el minijuego en el repositorio de GitHub aquí -> https://github.com/BetulioMay/minijuego1
 
 **Preguntas acerca de la implementación del juego:**
 

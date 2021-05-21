@@ -33,6 +33,15 @@ void ConjuntoParticulas::resizeConjunto(const int n_size) {
         this->capacidad = n_size;
 }
 
+bool ConjuntoParticulas::posValida(const int pos) const {
+    bool valida = false;
+    
+    if(pos < GetUtiles() && pos >= 0){
+        valida = true;
+    }
+    return valida;
+}
+
 // Funciones publicas de la clase
 
 
@@ -88,7 +97,7 @@ void ConjuntoParticulas::AgregaParticula(const Particula & p) {
 
 void ConjuntoParticulas::BorraParticula(const int posicion) {
 
-    if (posicion >= 0 && posicion < GetUtiles()){
+    if (posValida(posicion)){
 	for (int i = posicion; i < this->GetUtiles() - 1; ++i) {
 		this->set[i] = this->set[i + 1];
 	}
@@ -101,13 +110,13 @@ void ConjuntoParticulas::BorraParticula(const int posicion) {
 }
 
 Particula ConjuntoParticulas::ObtieneParticula(const int posicion) const {
-    if (posicion >= 0 && posicion < GetUtiles()){
+    if (posValida(posicion)){
 	return this->set[posicion];
     }
 }
 
 void ConjuntoParticulas::ReemplazaParticula(const int posicion, const Particula & p) {
-	if (posicion < GetUtiles() && posicion >= 0) {
+	if (posValida(posicion)) {
 		this->set[posicion] = p;
 	}
 }
