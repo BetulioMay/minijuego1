@@ -1,5 +1,5 @@
 # minijuego1
-Pequeño minijuego creado en C++ para la asignatura de MP.
+Pequeño minijuego creado en C++ para la asignatura de MP. Versión no disponible para Windows.
 
 ## Instalación
 
@@ -12,7 +12,7 @@ Dentro de la carpeta *minijuego1* para contruir el minijuego:
 ```
 make -f Makefile
 ```
-Para correrlo:
+Para jugar:
 ```
 ./dist/Debug/GNU-Linux/minijuego1
 ```

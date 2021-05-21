@@ -16,6 +16,8 @@ Para los métodos de consulta o de modificación de del conjunto hago un checkeo
 
 En la implementación de otros métodos como "reservaMemoria" y "liberaMemoria" se pasa como parámetro "Particula * &set", aunque es verdad que, como método de la clase, no es necesario pasar este parámetro, pero debido a que se también se manipulan conjuntos, como en la redimensión del conjunto, que no son del objeto en cuestión; se declara de esta manera para que sea más "general".
 
+Finalmente, en el método *Mostrar()* tuve un poco de libertad para hacer un formato a mi gusto, debido a que este método lo hice antes de la publicación de las instrucciones de entrega que muestran implicitamente como sería el formato, simplemente muestro la capacidad y la cantidad de elementos utiles del conjunto y para cada partícula de conjunto llamo a su método *ToString()*.
+
 En cada Test se podrá comprobar que *valgrind* no informa ningún error de fuga de memoria o mala gestión de la misma.
 
 A *grosso modo* no hubo más dificultad de lo mencionado, pasando todos los test del fichero *pruebasConjunto.cpp*.
