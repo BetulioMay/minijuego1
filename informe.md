@@ -36,7 +36,11 @@ Se podrá ver en el fichero que creo dos variable *ticks* y *time* estas variabl
 
 Cuando termina el juego, es decir, cuando no hayan mas particulas se dejarán de actualizar los datos del conjunto y de la partícula base y se dibujará una pantalla en donde se mostrará el tiempo total que se ha jugado.
 
-Más allá de lo dicho no hubo problema en la implementación del minijuego.
+Para el minijuego pretendía crear un método *update()* para la clase ConjuntoPartícula y en método *main* en cada *tick* llamara el método, de manera que se modularice más el minijuego. Al igual que un método *draw()* que haga las mismas funciones que hay en el *main()* pero que de esta manera quede más modularizado.
+Además que deja pie a que en el "canvas" se pinten mas cosas y no solo juego base, ya que el draw sería un método propio del ConjuntoPartículas, por lo tanto, si quisieramos agregar más objetos, estos tendrán sus propios métodos *update* y *draw* y podremos elegir cuales se actualizan o dibujan y cuales no.
+
+Más allá de lo dicho no hubo problema en la implementación del minijuego. Durante el desarrollo del mismo hice un control de versiones del proyecto con *git*, aún asi hubo dificultades con esto (errores en la autentificación, errores al hacer push, etc.)y tuve que eliminar el repositorio y hacerlo de nuevo, es por esto que se puede ver que no hubieron muchos *"commits"*.
+De igual manera, puede ver el minijuego en el repositorio de GitHub aquí -> https://github.com/BetulioMay/minijuego1.
 
 **Preguntas acerca de la implementación del juego:**
 
